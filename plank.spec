@@ -19,6 +19,7 @@ BuildRequires:	gtk+3-devel
 BuildRequires:	intltool
 BuildRequires:	libgee0.6-devel
 BuildRequires:	libwnck-devel
+BuildRequires:	libxml2-progs
 BuildRequires:	vala-libgee0.6
 BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
