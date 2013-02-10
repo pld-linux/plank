@@ -1,16 +1,14 @@
-%define		rel		1
-%define		subver	734
 Summary:	Plank is meant to be the simplest dock on the planet
 Name:		plank
-Version:	0.2.0
-Release:	0.%{subver}.%{rel}
+Version:	0.2.0.748
+Release:	1
 License:	GPL v3+
 Group:		X11/Applications
 URL:		http://wiki.go-docky.com/index.php?title=Plank:Introduction
-# bzr branch lp:plank; cd plank; bzr up -r734
+# bzr branch lp:plank; cd plank; bzr up -r748
 # ./autogen.sh; make dist
-Source0:	%{name}-%{version}.%{subver}.tar.xz
-# Source0-md5:	2f57cd8444c3c6eab3534739c5814440
+Source0:	%{name}-%{version}.tar.xz
+# Source0-md5:	96703e4a0677ae2ca5c1ffd6e570892e
 BuildRequires:	bamf3-devel
 BuildRequires:	desktop-file-utils
 BuildRequires:	gettext-devel
@@ -43,11 +41,12 @@ Requires:	%{name} = %{version}-%{release}
 Development files for %{name}
 
 %prep
-%setup -q -n %{name}-%{version}.%{subver}
+%setup -q
 
 %build
-%configure
-%{__make} V=1
+%configure \
+	--disable-silent-rules
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
