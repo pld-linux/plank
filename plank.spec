@@ -13,12 +13,14 @@ Source0:	%{name}-%{version}.%{subver}.tar.xz
 # Source0-md5:	2f57cd8444c3c6eab3534739c5814440
 BuildRequires:	bamf3-devel
 BuildRequires:	desktop-file-utils
+BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel
-BuildRequires:	gnome-common
 BuildRequires:	gtk+3-devel
 BuildRequires:	intltool
 BuildRequires:	libgee0.6-devel
 BuildRequires:	libwnck-devel
+BuildRequires:	vala-libgee0.6
+BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	vala
 BuildRequires:	xz
@@ -59,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 
 desktop-file-validate $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
 
-%{__rm} $RPM_BUILD_ROOT%{_localedir}/sma
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/sma
 
 %find_lang %{name}
 
