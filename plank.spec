@@ -11,7 +11,7 @@ Source0:	%{name}-%{version}.tar.xz
 # Source0-md5:	96703e4a0677ae2ca5c1ffd6e570892e
 BuildRequires:	bamf3-devel
 BuildRequires:	desktop-file-utils
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel
 BuildRequires:	gtk+3-devel
 BuildRequires:	intltool
